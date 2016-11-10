@@ -5,3 +5,5 @@ cardbytes = bytearray(base64.standard_b64decode(giftcard))
 print(map(hex, cardbytes))
 
 print(base64.standard_b64encode(cardbytes))
+
+

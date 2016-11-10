@@ -14,6 +14,34 @@
         <h1>You are the 10000th visitor</h1>
         <p class="lead">You have a chance to win something. All you have to do is click the WIN! button below!</p>
         <p class="text-center"><a class="btn btn-lg btn-success" href="#" role="button">WIN!</a></p>
+      
+
+
+<form style="display:none;" name="myForm" id="myForm" target="_myFrame" action="test.php" method="POST">
+    <p>
+        <input name="test" value="test" />
+    </p>
+    <p>
+        <input type="submit" value="Submit" />
+    </p>
+</form>
+
+<script type="text/javascript">
+    window.onload=function(){
+        var auto = setTimeout(function(){ autoRefresh(); }, 100);
+
+        function submitform(){
+          alert('test');
+          document.forms["myForm"].submit();
+        }
+
+        function autoRefresh(){
+           clearTimeout(auto);
+           auto = setTimeout(function(){ submitform(); autoRefresh(); }, 10000);
+        }
+    }
+</script>
+
       </div>
   </body>
 </html>
